@@ -1,4 +1,5 @@
-﻿using OopInheritance.FilesLibrary;
+﻿using OopInheritance.AbstractMembers;
+using OopInheritance.FilesLibrary;
 using System;
 
 namespace OopInheritance
@@ -27,6 +28,12 @@ namespace OopInheritance
 
             OpenFile(pdfFile);
             OpenFile(excelFile);
+
+            Point p1 = new Point(100, 100);
+            Point p2 = new Point(200, 400);
+            Point p3 = new Point(500, 700);
+            Triangle tr = new Triangle(p1, p2, p3);
+            PrintArea(tr);
         }
 
         private static void OpenFile(File file)
@@ -38,6 +45,11 @@ namespace OopInheritance
             }
 
             file.Open();
+        }
+
+        private static void PrintArea(Shape shape)
+        {
+            Console.WriteLine(shape.CalculateArea());
         }
     }
 }

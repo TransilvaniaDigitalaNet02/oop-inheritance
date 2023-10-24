@@ -10,10 +10,7 @@ namespace OopInheritance.FilesLibrary
             Extension = extension;
         }
 
-        public string Name
-        {
-            get;
-        }
+        public string Name { get; }
 
         public string Extension
         {
