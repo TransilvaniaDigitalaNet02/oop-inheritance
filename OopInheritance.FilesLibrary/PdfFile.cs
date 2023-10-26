@@ -5,7 +5,7 @@ namespace OopInheritance.FilesLibrary
     public class PdfFile : File
     {
         public PdfFile(string name, bool isEditable) 
-            : base(name, "pdf")
+            : base(name)
         {
             IsEditable = isEditable;
         }
@@ -13,6 +13,19 @@ namespace OopInheritance.FilesLibrary
         public bool IsEditable
         {
             get;
+        }
+
+        public override string Extension
+        {
+            get
+            {
+                return "pdf";
+            }
+        }
+
+        public override void Open()
+        {
+            Console.WriteLine($"Opening PDF file {Name}.{Extension}");
         }
 
         public void AttemptEdit()

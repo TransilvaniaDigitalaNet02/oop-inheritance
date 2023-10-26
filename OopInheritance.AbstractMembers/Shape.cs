@@ -17,13 +17,13 @@ namespace OopInheritance.AbstractMembers
     public class Triangle : Shape
     {
         public Triangle(Point p1, Point p2, Point p3)
-            : base(new[] { p1, p2, p2})
+            : base(new[] { p1, p2, p3})
         {
         }
 
         public override double CalculateArea()
         {
-            return 0;
+            return 10;
         }
     }
 

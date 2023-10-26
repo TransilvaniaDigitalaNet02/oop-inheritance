@@ -2,24 +2,17 @@
 
 namespace OopInheritance.FilesLibrary
 {
-    public class File
+    public abstract class File
     {
-        protected File(string name, string extension)
+        protected File(string name)
         {
             Name = name;
-            Extension = extension;
         }
 
         public string Name { get; }
 
-        public string Extension
-        {
-            get;
-        }
+        public abstract string Extension { get; }
 
-        public void Open()
-        {
-            Console.WriteLine($"Opening file '{Name}.{Extension}'");
-        }
+        public abstract void Open();
     }
 }
